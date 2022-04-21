@@ -4,6 +4,9 @@
 
 # Base64Encode.py
 
+Prereqs:
+pyperclip - For copying to clipboard
+
 This script takes in a file path as a script parameter, after which the script
 then attempts to encode the file's contents into base64. The result is then
 copied to the clipboard.
