@@ -1,6 +1,6 @@
 ## Current Scripts
 
-1. Base64Encode.py - Encodes images to Base64 string
+1. Base64Encode.py - Encodes files to Base64 string
 
 # Base64Encode.py
 
