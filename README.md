@@ -1,68 +1,28 @@
-<p align="center">
-  <a href="https://github.com/mrcogllrdo/PixelShift">
-    <img src="https://raw.githubusercontent.com/mrcogllrdo/PixelShift/master/introImg.jpg" alt="PixelShift intro" width="630" height="354">
-  </a>
-</p>
-
-<h3 align="center">PixelShift</h3>
+<h3 align="center">My Personal Toolbox</h3>
 
 ![Version](https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)
-[![python](https://img.shields.io/badge/python-3.8-blue.svg?logo=python&labelColor=yellow)](https://www.python.org/downloads/)
-[![platform](https://img.shields.io/badge/platform-osx%2Flinux%2Fwindows-green.svg)](https://github.com/mrcogllrdo/PixelShift)
+[![python](https://img.shields.io/badge/python-3.10-blue.svg?logo=python&labelColor=yellow)](https://www.python.org/downloads/)
+[![platform](https://img.shields.io/badge/platform-windows-green.svg)](https://github.com/mrcogllrdo/Tools)
 
 <p align="center">
-  Image scrambler with stats for security and privacy purposes.
-  <br>
-  <a href="https://github.com/mrcogllrdo/PixelShift/blob/master/CHANGELOG.md"><strong>New Changes</strong></a>
-  .
-  <a href="https://github.com/mrcogllrdo/PixelShift/wiki"><strong>Check out the wiki!</strong></a>
+  A place to dump the tools I've created along the way while learning stuff
 </p>
 
-## About PixelShift
+## Structure Format
 
-PixelShift is an image viewer designed to scramble images such that they become unrecognizable after shared a certain number of times. The rate at which they deteriorate is customizable with a preview to ensure adequate scrambling. Each image is encrypted and signed before being shared with others alongside a header that contains relevant metadata.
+I've tried to organize the repo according to the nature of the tools and the problem they attempt to address. For example, the very first tool I'm creating is for encoding images to Base64; the utility for this tool is to bake images into notes using note-taking software that supports rendering Base64 strings. Its structure would look something like 'Data Manipulation > Base64 > Base64Encode.py'.
 
-The rationale behind PixelShift is that an image should not have the potential to be leaked with perfect reproducibility if it was only intended to be shared within a small group of people a handful of times. This is especially apparent when the image contains sensitive information. If the user is more concerned about getting an idea across versus the quality of the image then this software could be beneficial.
+The typical structure I'll follow is '\[Topic\] > \[Sub-topic or concept\] > \[script\]'. This may change in the future if the tool becomes sophisticated enough in that it requires several other scripts. The root level's table of contents tries to encapsulate the general themes of my scripts, with each sub-level giving more specific explanations until the user reaches the script itself. This is done for organizational purposes (at least until I figure out a better system to use).
 
-Stats such as standard deviation and cosine similarity score (more to come soon!) are included to see how much the scrambled image deviates from the original. This can always serve as a sanity check to see if an adversary can 1) trace the scrambled image to the original, 2) determine how many times it has been shared, 3) develop a map of when it was shared and with whom, et cetera.
+## Current Structure
 
-Note current and planned features are open to change. For example, the cosine similarity score requires having the original and altered image, defeating the purpose of this software. Comparison techniques that only require one-way metadata of the original image (metadata and the image are not one-to-one; something akin to salting the image can guarantee this) are currently being investigated.
-
-## Demo
-
-Please feel free to check out the demo folder to see the program's current features without running it yourself. There's also a brief discussion for using one of the parameters to scramble your images over the other!
+1. Data Manipulation - Anything involving manipulation of data
 
 ## Prerequisites
 
-- NumPy for the stats-heavy operations
-- Pip to make installing stuff like NumPy and Pillow easy (should come already with Python)
-- Pillow for image manipulation
-
-## Installation
-
-Clone the repo: `git clone https://github.com/mrcogllrdo/PixelShift.git`
-
-Then run
-
-    pip install Pillow    
-    
-to install Pillow, and
-    
-    pip install numpy
-    
-to install NumPy.
-
-We'll be using Tkinter for the GUI.
-
-## Documentation
-
-Please refer to the [wiki](https://github.com/mrcogllrdo/PixelShift/wiki).
+Unless noted otherwise, I am using Python3, specifically 3.10 at the time of this writing (4/21/22). I tend to install packages using pip.
 
 ## Copyright and license
 
-Code and documentation copyright 2020 under [PixelShift's author](https://github.com/mrcogllrdo). Code released under the [AGPL v3.0 License](https://github.com/mrcogllrdo/PixelShift/blob/master/LICENSE). Documentation released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
-
-## Acknowledgements and Credits
-
-Thanks to Pixabay for allowing me access to royalty-free pics.
+Code and documentation copyright 2022 under [Tools' author](https://github.com/marcgallard). Code released under the [AGPL v3.0 License](https://github.com/mrcogllrdo/PixelShift/blob/master/LICENSE). Documentation released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
